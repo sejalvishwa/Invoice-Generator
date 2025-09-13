@@ -106,7 +106,7 @@ onMounted(() => {
             {{ invoice.status === 'paid' ? 'Unpaid' : 'Mark Paid' }}
           </button>
           <button @click="deleteInvoice(invoice.id)" class="btn-delete">Delete</button>
-          <a :href="`/download/${invoice.id}`" target="_blank" class="btn-download">Download</a>
+          <a :href="`/generate/${invoice.id}`" target="_blank" class="btn-download">Download</a>
         </div>
       </div>
     </div>

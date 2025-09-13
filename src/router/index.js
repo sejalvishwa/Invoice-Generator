@@ -28,7 +28,7 @@ const routes = [
     component: InvoiceHistory
   },
   {
-    path: '/download/:id',
+    path: '/generate/:id',
     name: 'InvoiceDownload',
     component: () => import('@/components/InvoiceDownload.vue')
   },

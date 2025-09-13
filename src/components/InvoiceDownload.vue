@@ -81,7 +81,7 @@ onMounted(() => {
   const foundInvoice = invoices.find(inv => inv.id == route.params.id)
   if (foundInvoice) {
     invoice.value = foundInvoice
-    setTimeout(() => window.print(), 500)
+    // setTimeout(() => window.print(), 500)
   } else {
     window.location.href = '/history'
   }
