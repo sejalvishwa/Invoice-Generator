@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    <!-- Company & Invoice Details -->
+    
     <div class="invoice-details">
       <div class="company-box">
         <h3>From:</h3>
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <!-- Client Info -->
+   
     <div class="client-box">
       <h3>Bill To:</h3>
       <p><strong>{{ invoice.client.name }}</strong></p>
@@ -35,7 +35,7 @@
       <p>Email: {{ invoice.client.email }}</p>
     </div>
 
-    <!-- Items Table -->
+  
     <table class="items-table">
       <thead>
         <tr>
@@ -57,7 +57,7 @@
       </tbody>
     </table>
 
-    <!-- Summary -->
+
     <div class="summary-box">
       <p><strong>Subtotal:</strong> ${{ subtotal.toFixed(2) }}</p>
       <p><strong>Tax ({{ invoice.taxRate }}%):</strong> ${{ tax.toFixed(2) }}</p>
@@ -81,7 +81,7 @@ onMounted(() => {
   const foundInvoice = invoices.find(inv => inv.id == route.params.id)
   if (foundInvoice) {
     invoice.value = foundInvoice
-    // setTimeout(() => window.print(), 500)
+    setTimeout(() => window.print(), 1000)
   } else {
     window.location.href = '/history'
   }
@@ -111,7 +111,7 @@ const printPage = () => window.print()
   background: #fff;
 }
 
-/* Header */
+
 .invoice-header {
   display: flex;
   justify-content: space-between;
@@ -129,7 +129,7 @@ const printPage = () => window.print()
   margin: 0;
 }
 
-/* Company & Invoice Info */
+
 .invoice-details {
   display: flex;
   justify-content: space-between;
@@ -152,7 +152,7 @@ const printPage = () => window.print()
   background: #f1f1f1;
 }
 
-/* Items Table */
+
 .items-table {
   width: 100%;
   border-collapse: collapse;
@@ -170,7 +170,7 @@ const printPage = () => window.print()
   color: #fff;
 }
 
-/* Summary */
+
 .summary-box {
   width: 300px;
   margin-left: auto;
@@ -186,7 +186,7 @@ button {
   cursor: pointer;
 }
 
-/* Print Styles */
+
 @media print {
   button {
     display: none;
